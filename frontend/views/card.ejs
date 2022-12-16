@@ -1,0 +1,39 @@
+<div class="col-sm-12 col-md-6">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><%-resultado.nome_especialidade%></h5>
+      <img
+        class="card-img-bottom"
+        src="../../public/images/pintura-imagem.jpg"
+        alt="Imagem de capa do card"
+      />
+      <div class="card-text">
+        <p class="card-text-label" id="cardLocal">Local:</p>
+        <p class="card-text-response"><%-resultado.cidade%></p>
+      </div>
+      <div class="card-text">
+        <p class="card-text-label" id="cardObra">Obra:</p>
+        <p class="card-text-response"><%-resultado.id_obra%></p>
+      </div>
+      <div class="card-text">
+        <p class="card-text-label" id="cardDataInicio">Data de Início:</p>
+        <p class="card-text-response"><%-resultado.data_inicio%></p>
+      </div>
+      <div class="card-text">
+        <p class="card-text-label" id="cardDataTermino">Data de término:</p>
+        <p class="card-text-response"><%-resultado.data_fim%></p>
+      </div>
+      <div class="card-text">
+        <p class="card-text-label" id="cardResumo">Resumo:</p>
+        <p class="card-text-response"><%-resultado.resumo%></p>
+      </div>
+
+      <div class="containerBotaoAcessar">
+        <a href="/detalhesOportunidades?id_oportunidade=<%-resultado.id_oportunidade%>"><button type="button" class="btn btn-warning botaoAcessar">
+          Acessar
+        </button></a>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,318 @@
+<%- include("../cabecalho") %>
+
+
+<div class="container-fluid containerPesquisa">
+
+	<form action="/pesquisa" method="post">
+		<div class="form-group formAgrupamento" align="center">
+
+			<div class="row gridAgrupamentoHome">
+				<div class="col-sm-12 col-md-6 col-lg-5 mt-4">
+					<label for="especialidadeInput" class="inputForm">Que especialidade você procura?</label>
+					<input type="text" class="form-control mt-1" name="especialidadeInput" id="especialidadeInput" value=""
+						placeholder="Pesquisa por especialidade">
+				</div>
+
+				<div class="col-sm-12 col-md-6 col-lg-5 mt-4">
+					<label for="localidadeInput" class="inputForm">Em qual estado você procura?</label>
+					<input type="text" class="form-control mt-1" name="localidadeInput"  id="localidadeInput"  value=""
+						placeholder="Pesquisa por localidade">
+				</div>
+
+			</div>
+				<input type="submit" class="btn btn-dark botaoPesquisar centered" value="PROCURAR OPORTUNIDADES">
+
+		</div>
+	</form>
+
+
+</div>
+
+<div class="container-fluid containerIconeOportunidades">
+	<div class="tituloIconeOportunidades">
+		<h2>Pesquise por oportunidade</h2>
+	</div>
+
+	<div class="row">
+		<a href="/pesquisa?filtro=especialidade&especialidade=ceramica">
+		<div class="col-6 col-sm-4 col-md-3 col-lg-3">
+			
+			<div class="containerIconeOportunidade" align="center">
+				<img src="../../public/images/icones/icone-ceramica.svg" alt="">
+				<p>Cerâmica</p>
+			
+			</div>
+		</a>
+		</div>
+		<a href="/pesquisa?filtro=especialidade&especialidade=fiacao">
+		<div class="col-6 col-sm-4 col-md-3 col-lg-3">
+			<div class="containerIconeOportunidade" align="center">
+				<img src="../../public/images/icones/icone-fiacao.svg" alt="">
+				<p>Fiação</p>
+			</div>
+		</a>
+		</div>
+		<a href="/pesquisa?filtro=especialidade&especialidade=contrapiso">
+		<div class="col-6 col-sm-4 col-md-3 col-lg-3">
+			<div class="containerIconeOportunidade" align="center">
+				<img src="../../public/images/icones/icone-contrapiso.svg" alt="">
+				<p>Contrapiso</p>
+			</div>
+		</a>
+		</div>
+		<a href="/pesquisa?filtro=especialidade&especialidade=gas">
+		<div class="col-6 col-sm-4 col-md-3 col-lg-3">
+			<div class="containerIconeOportunidade" align="center">
+				<img src="../../public/images/icones/icone-gas.svg" alt="">
+				<p>Gás</p>
+			</div>
+		</a>
+		</div>
+		<a href="/pesquisa?filtro=especialidade&especialidade=gesso">
+		<div class="col-6 col-sm-4 col-md-3 col-lg-3">
+			<div class="containerIconeOportunidade" align="center">
+				<img src="../../public/images/icones/icone-gesso.svg" alt="">
+				<p>Gesso</p>
+			</div>
+		</a>
+		</div>
+		<a href="/pesquisa?filtro=especialidade&especialidade=limpeza">
+		<div class="col-6 col-sm-4 col-md-3 col-lg-3">
+			<div class="containerIconeOportunidade" align="center">
+				<img src="../../public/images/icones/icone-limpeza.svg" alt="">
+				<p>Limpeza</p>
+			</div>
+			</a>
+		</div>
+		<a href="/pesquisa?filtro=especialidade&especialidade=pintura_externa">
+		<div class="col-6 col-sm-4 col-md-3 col-lg-3">
+			<div class="containerIconeOportunidade" align="center">
+				<img src="../../public/images/icones/icone-pintura-externa.svg" alt="">
+				<p>Pintura externa</p>
+			</div>
+			</a>
+		</div>
+		<a href="/pesquisa?filtro=especialidade&especialidade=pintura_interna">
+		<div class="col-6 col-sm-4 col-md-3 col-lg-3">
+			<div class="containerIconeOportunidade" align="center">
+				<img src="../../public/images/icones/icone-pintura-interna.svg" alt="">
+				<p>Pintura interna</p>
+			</div>
+			</a>
+		</div>
+		<a href="/pesquisa?filtro=especialidade&especialidade=tubulacao">
+		<div class="col-6 col-sm-4 col-md-3 col-lg-3">
+			<div class="containerIconeOportunidade" align="center">
+				<img src="../../public/images/icones/icone-tubulacao.svg" alt="">
+				<p>Tubulação</p>
+			</div>
+			</a>
+		</div>
+		<a href="/pesquisa?filtro=especialidade&especialidade=eletrico">
+		<div class="col-6 col-sm-4 col-md-3 col-lg-3">
+			<div class="containerIconeOportunidade" align="center">
+				<img src="../../public/images/icones/icone-eletrico.svg" alt="">
+				<p>Elétrico</p>
+			</div>
+			</a>
+		</div>
+		<a href="/pesquisa?filtro=especialidade&especialidade=fundacao">
+		<div class="col-6 col-sm-4 col-md-3 col-lg-3">
+			<div class="containerIconeOportunidade" align="center">
+				<img src="../../public/images/icones/icone-fundacoes.svg" alt="">
+				<p>Fundações</p>
+			</div>
+			</a>
+		</div>
+		<a href="/pesquisa?filtro=especialidade&especialidade=bandejao">
+		<div class="col-6 col-sm-4 col-md-3 col-lg-3">
+			<div class="containerIconeOportunidade" align="center">
+				<img src="../../public/images/icones/icone-bandejao.svg" alt="">
+				<p>Bandejão</p>
+			</div>
+			</a>
+		</div>
+	</div>
+
+
+
+</div>
+
+<div class="container-fluid depoimentosContainer" align="center">
+	<div class="tituloDepoimentos">
+		<h2>DEPOIMENTOS</h2>
+	</div>
+	<div class="row depoimentosGrupo" align="center">
+		<div class="depoimento col-12 col-md-12 col-lg-5">
+			<div class="imagemEmpreiteira" id="empreiteiro2"></div>
+			<h3>Jorge Obras</h3>
+			<p>Gostaria de expressar minha mais sincera gratidão pela parceria, comunicação e transparência durante a obra. A colaboração e o apoio da empresa foram fundamentais para o sucesso do projeto. Agradeço a disponibilidade em esclarecer todas as dúvidas e o profissionalismo em manter a comunicação fluida. A transparência nos processos foi essencial para a confiança e o respeito mútuo. Novamente, muito obrigado por todo o apoio e colaboração. Estou ansioso por mais oportunidades de trabalhar juntos no futuro.</p>
+		</div>
+		<div class="depoimento col-12 col-md-12 col-lg-5">
+			<div class="imagemEmpreiteira" id="empreiteiro1">
+
+			</div>
+			<h3>Fernanda Empreiteira</h3>
+			<p>Agradeço sinceramente à empresa pela oportunidade de participar da obra e por toda a parceria, comunicação e transparência durante o projeto. A colaboração e o apoio da empresa foram fundamentais para o sucesso da obra e eu estou muito grato por ter tido a chance de fazer parte disso. Agradeço também a disponibilidade em esclarecer todas as dúvidas e o profissionalismo em manter a comunicação fluida. A transparência nos processos foi essencial para a confiança e o respeito mútuo.</p>
+		</div>
+	</div>
+
+
+</div>
+
+<div class="container oportunidadesMaisProcuradas">
+	<div class="tituloOportunidadesMaisProcuradas">
+		<h2>OPORTUNIDADES MAIS PROCURADAS</h2>
+	</div>
+
+	<h3>Oportunidades por cidade</h3>
+	<div class="row oportunidadesPorCidade">
+		<a href="/pesquisa?filtro=cidade&cidade=rj">
+		<div class="col-6 col-sm-6 col-md-6 col-lg-4 localidadeOportunidade">
+			<p>Rio de Janeiro (RJ)</p>
+			</a>
+		</div>
+		<a href="/pesquisa?filtro=cidade&cidade=sp">
+		<div class="col-6 col-sm-6 col-md-6 col-lg-4 localidadeOportunidade">
+			<p>São Paulo (SP)</p>
+			</a>
+		</div>
+		<a href="/pesquisa?filtro=cidade&cidade=bh">
+		<div class="col-6 col-sm-6 col-md-6 col-lg-4 localidadeOportunidade">
+			<p>Belo Horizonte</p>
+			</a>
+		</div>
+		<a href="/pesquisa?filtro=cidade&cidade=pe">
+		<div class="col-6 col-sm-6 col-md-6 col-lg-4 localidadeOportunidade">
+			<p>Recife (PE)</p>
+			</a>
+		</div>
+		<a href="/pesquisa?filtro=cidade&cidade=saneamento">
+		<div class="col-6 col-sm-6 col-md-6 col-lg-4 localidadeOportunidade">
+			<p>Fortaleza (CE)</p>
+			</a>
+		</div>
+		<a href="/pesquisa?filtro=cidade&cidade=ba">
+		<div class="col-6 col-sm-6 col-md-6 col-lg-4 localidadeOportunidade">
+			<p>Salvador (BA)</p>
+			</a>
+		</div>
+	</div>
+
+
+		<h3>Setores mais procurados</h3>
+		<div class="row oportunidadesPorSetor">
+			<a href="/pesquisa?filtro=especialidade&especialidade=ceramica">
+			<div class="col-6 col-sm-6 col-md-6 col-lg-4 localidadeOportunidade">
+				<p>Cerâmica</p>
+			</a>
+			</div>
+		
+		<a href="/pesquisa?filtro=especialidade&especialidade=pintura">
+			<div class="col-6 col-sm-6 col-md-6 col-lg-4 localidadeOportunidade">
+				<p>Pintura</p>
+			</a>
+			</div>
+			<a href="/pesquisa?filtro=especialidade&especialidade=carpintaria">
+			<div class="col-6 col-sm-6 col-md-6 col-lg-4 localidadeOportunidade">
+				<p>Carpintaria</p>
+			</a>
+			</div>
+			<a href="/pesquisa?filtro=especialidade&especialidade=saneamento">
+			<div class="col-6 col-sm-6 col-md-6 col-lg-4 localidadeOportunidade">
+				<p>Saneamento</p>
+				</a>
+			</div>
+			<a href="/pesquisa?filtro=especialidade&especialidade=hidraulico">
+			<div class="col-6 col-sm-6 col-md-6 col-lg-4 localidadeOportunidade">
+				<p>Hidráulico</p>
+				</a>
+			</div>
+			<a href="/pesquisa?filtro=especialidade&especialidade=ambiental">
+			<div class="col-6 col-sm-6 col-md-6 col-lg-4 localidadeOportunidade">
+				<p>Ambiental</p>
+				</a>
+			</div>
+	</div>
+</div>
+
+<div class="perguntasFrequentes">
+	<h2>PERGUNTAS FREQUENTES</h2>
+   
+	
+	<section class="accordion-section clearfix mt-3" aria-label="Question Accordions">
+		<div class="container">
+		
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			  <div class="panel panel-default">
+				<div class="panel-heading p-3 mb-3" role="tab" id="heading0">
+				  <h3 class="panel-title">
+					<a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">
+					  Quem é a MRV?
+					</a>
+				  </h3>
+				</div>
+				<div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
+				  <div class="panel-body px-3 mb-4">
+					<p>With Solodev CMS, you and your visitors will benefit from a finely-tuned technology stack that drives the highest levels of site performance, speed and engagement - and contributes more to your bottom line. Our users fell in love with:</p>
+					<ul>
+					  <li>Light speed deployment on the most secure and stable cloud infrastructure available on the market.</li>
+					  <li>Scalability – pay for what you need today and add-on options as you grow.</li>
+					  <li>All of the bells and whistles of other enterprise CMS options but without the design limitations - this CMS simply lets you realize your creative visions.</li>
+					  <li>Amazing support backed by a team of Solodev pros – here when you need them.</li>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+			  
+			  <div class="panel panel-default">
+				<div class="panel-heading p-3 mb-3" role="tab" id="heading1">
+				  <h3 class="panel-title">
+					<a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+					  Quantos colaboradores preciso ter?
+					</a>
+				  </h3>
+				</div>
+				<div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+				  <div class="panel-body px-3 mb-4">
+					<p>Building a website is extremely easy. With a working knowledge of HTML and CSS you will be able to have a site up and running in no time.</p>
+				  </div>
+				</div>
+			  </div>
+			  
+			  <div class="panel panel-default">
+				<div class="panel-heading p-3 mb-3" role="tab" id="heading2">
+				  <h3 class="panel-title">
+					<a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
+					  Em quanto tempo fecha o contrato?
+					</a>
+				  </h3>
+				</div>
+				<div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+				  <div class="panel-body px-3 mb-4">
+					<p>Using Amazon AWS technology which is an industry leader for reliability you will be able to experience an uptime in the vicinity of 99.95%.</p>
+				  </div>
+				</div>
+			  </div>
+			  
+			  <div class="panel panel-default">
+				<div class="panel-heading p-3 mb-3" role="tab" id="heading3">
+				  <h3 class="panel-title">
+					<a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+					  Quais os tipos de oportunidades?
+					</a>
+				  </h3>
+				</div>
+				<div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+				  <div class="panel-body px-3 mb-4">
+					<p>Yes, Solodev CMS is built to handle the needs of any size company. With our Multi-Site Management, you will be able to easily manage all of your websites.</p>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		
+		</div>
+	  </section>
+</div>
+	<script>console.log('Current directory: ' + process.cwd());</script>
+<%- include("../rodape") %>

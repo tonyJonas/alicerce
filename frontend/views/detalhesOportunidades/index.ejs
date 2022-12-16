@@ -1,0 +1,115 @@
+<%- include("../cabecalho") %>
+
+
+<nav class="containerLocalizacao">
+
+	<img src="../../public/images/homepage-icon.svg" alt="">
+	<a href="/">Home</a>
+	<p id="separadorLocalizacao">></p>
+	<a href="/pesquisa">Página de busca</a>
+	<p id="separadorLocalizacao">></p>
+	<a href="#" class="paginaAtual">Detalhes da oportunidade</a>
+  </nav>
+
+  
+  <div class="container-fluid">
+
+	
+<div class="col-12">
+	<div class="card cardCompleto">
+	  <div class="card-body">
+		<h5 class="card-title"><%-response.nome_especialidade%></h5>
+		<img class="card-img-bottom" src="../../public/images/pintura-imagem.jpg" alt="Imagem de capa do card">
+		<div class="card-text">
+		  <p class="card-text-label" id="cardLocal">Local: </p>
+		  <p class="card-text-response"><%-response.cidade%></p>
+		</div>
+		<div class="card-text">
+		  <p class="card-text-label" id="cardObra">Obra: </p>
+		  <p class="card-text-response"><%-response.nome_obra%></p>
+		</div>
+		<div class="card-text">
+		  <p class="card-text-label" id="cardDataInicio">Data de Início: </p>
+		  <p class="card-text-response"><%-response.data_inicio%></p>
+		</div>
+		<div class="card-text">
+		  <p class="card-text-label" id="cardDataTermino">Data de término: </p>
+		  <p class="card-text-response"><%-response.data_fim%></p>
+		</div>
+
+		<div class="card-text">
+			<p class="card-text-label" id="cardDataTermino">Detalhes: </p>
+			<p class="card-text-response"><%-response.descricao%>.</p>
+		  </div>
+		  <div class="card-text">
+			<p class="card-text-label" id="cardDataTermino">Quantidade de pessoas desejadas: </p>
+			<p class="card-text-response"><%-response.quantidade_pessoas_desejadas%></p>
+		  </div>
+		  <div class="card-text">
+			<p class="card-text-label" id="cardDataTermino">Atividades: </p>
+			<p class="card-text-response"><%-response.resumo%></p>
+		  </div>
+		  <!-- <div class="card-text">
+			<p class="card-text-label" id="cardDataTermino">Informações adicionais: </p>
+			<p class="card-text-response"><%-response.resumo%></p>
+		  </div> -->
+
+		<div class="containerBotaoAcessar">
+		  <button type="button" class="btn btn-warning botaoAcessar">Se inscrever</button>
+
+		</div>
+	  </div>
+	</div>
+  </div>
+</div>
+  <!-- <div class="container-fluid oportunidadesParecidas">
+	<div class="tituloOportunidadesParecidas">
+		<h2>Oportunidades parecidas com esta</h2>
+	</div>
+	
+
+	
+<div class="col-sm-12 col-md-6 container-card oportunidadeParecida">
+	<div class="card ">
+	  <div class="card-body">
+		<h5 class="card-title">PINTURA</h5>
+		<img class="card-img-bottom" src="./pintura-imagem.jpg" alt="Imagem de capa do card">
+		<div class="card-text">
+		  <p class="card-text-label" id="cardLocal">Local: </p>
+		  <p class="card-text-response">São Paulo, SP</p>
+		</div>
+		<div class="card-text">
+		  <p class="card-text-label" id="cardObra">Obra: </p>
+		  <p class="card-text-response">Prédio Nova Holanda</p>
+		</div>
+		<div class="card-text">
+		  <p class="card-text-label" id="cardDataInicio">Data de Início: </p>
+		  <p class="card-text-response">03/02/2023</p>
+		</div>
+		<div class="card-text">
+		  <p class="card-text-label" id="cardDataTermino">Data de término: </p>
+		  <p class="card-text-response">03/06/2023</p>
+		</div>
+		<div class="card-text">
+			<p class="card-text-label" id="cardResumo">Resumo: </p>
+			<p class="card-text-response">Será preciso pintar internamente mais de 20 quartos, utilizando os próprios
+			  materiais.</p>
+		  </div>
+
+		<div class="containerBotaoAcessar">
+		  <button type="button" class="btn btn-warning botaoAcessar">Cadastrar</button>
+
+		</div>
+	  </div>
+	</div> -->
+  </div>
+
+
+  </div>
+
+  
+
+
+  </div>
+
+<%- include("../rodape") %>

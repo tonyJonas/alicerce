@@ -1,0 +1,59 @@
+<%- include("../cabecalho") %>
+
+
+    <div class="container-fluid container-fluid-cadastro">
+        <!-- home > cadastro  -->
+
+        <div class="container areaCadastro">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center teste">Cadastro</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 iconeCadastroInicial">
+                    <img src="../../public/images/cadastro-1.svg" alt="">
+                </div>
+            <div class="row cadastro">
+            <form class="formCadastro" action="/cadastro/cadastro1Post" method="post">
+                    <div class="containerCadastro">
+                
+                <div class="col-12 grupoLabel">
+                    <label class="form-label" for="cnpj">Digite o CNPJ da empresa</label>
+                    <input class="form-control" type="text" name="cnpj" placeholder="Ex: 38.386.974/0001-28"> 
+                </div>
+                <div class="col-12 grupoLabel">
+                    <label class="form-label" for="email">E-mail da empresa</label>
+                    <input class="form-control" type="text" name="email" placeholder="Ex: empresa-empreiteira@gmail.com"> 
+                </div>
+                <div class="col-12 grupoLabel">
+                    <label class="form-label" for="telefone">Telefone celular para contato</label>
+                    <input class="form-control" type="text" name="telefone" placeholder="Ex: 11940028922.com"> 
+                </div>
+
+                <div class="col-12 grupoLabel">
+                    <label class="form-label" for="senha" >Senha</label>
+                    <input class="form-control" type="password" name="senha" placeholder="Digite a sua senha aqui"> 
+                </div>
+
+                <div class="col-12 grupoLabel">
+                    <label class="form-label" for="senha-repetida" type="password">Repita a sua senha</label>
+                    <input class="form-control" type="password" name="senha-repetida" placeholder="Digite novamente a sua senha"> 
+                </div>
+                <!-- <input class="botaoAcessar" type="submit" value="CONTINUAR"> -->
+                <div class="containerBotaoCadastro">                <input type="submit" class="btn btn-warning botaoAcessar botaoCadastro" value="CONTINUAR"> 
+                </div>
+            </div>
+            </form>
+            
+            </div>
+
+                
+        </div>
+    </div>
+
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,user-scalable=no"
+    />
+    <title>Alicerce - home</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen and (min-device-width: 320px) and (max-device-width: 500px)"
+      href="mobile.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen and (min-device-width: 501px)"
+      href="desktop.css"
+    />
+  </head>
+  <body>
+    <form class="form" method="POST" action="/cadastro1Post">
+      <div class="container1">
+        <h2>Cadastro</h2>
+        <img src="cadastroImg1.png" />
+        <label for="cnpj">Digite o CNPJ da empresa</label>
+        <input type="text" id="cnpj" name="cnpj" />
+        <label for="email">E-mail da empresa*</label>
+        <input type="text" id="nome" name="email" />
+        <label for="celular">Telefone*</label>
+        <input type="text" id="Telefone" name="telefone" />
+        <label for="senha"></label>
+        <input type="password" placeholder="" />
+        <h3>Confirme sua senhadadas</h3>
+        <input type="password" placeholder="" />
+        <button type="submit"><b>CONTINUAR</b></button>
+      </div>
+    </form>
+    <script src="src\backend\app.js"></script>
+  </body>
+</html>

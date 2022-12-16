@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/Inteli/Documents/inteli/modulo2/api_temporaria/src/banco_dados/data_alicerce.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure pragmas browser query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="125"/><column_width id="3" width="5158"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,15:mainsqlite_sequence"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">BEGIN TRANSACTION;
+
+DROP TABLE IF EXISTS `enderecos`;
+DROP TABLE IF EXISTS `especialidades`;
+DROP TABLE IF EXISTS `certificados`;
+DROP TABLE IF EXISTS `empreiteiras`;
+DROP TABLE IF EXISTS `obras`;
+DROP TABLE IF EXISTS `funcionarios_empreiteiras`;
+DROP TABLE IF EXISTS `empreiteiras_certificados`;
+DROP TABLE IF EXISTS `admin`;
+DROP TABLE IF EXISTS `oportunidades`;
+DROP TABLE IF EXISTS `empreiteiras_especialidades`;
+DROP TABLE IF EXISTS `feedbacks`;
+DROP TABLE IF EXISTS `empreiteira_historico_obras`;
+DROP TABLE IF EXISTS `favoritos`;
+DROP TABLE IF EXISTS `contratos`;
+
+
+CREATE TABLE IF NOT EXISTS &quot;enderecos&quot; (
+    &quot;id_endereco&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    &quot;cep&quot; VARCHAR(8) NOT NULL,
+    &quot;logradouro&quot; VARCHAR(100) NOT NULL,
+    &quot;bairro&quot; VARCHAR(50) NOT NULL,
+    &quot;cidade&quot; VARCHAR(50) NOT NULL,
+    &quot;estado&quot; VARCHAR(2) NOT NULL,
+    &quot;numero&quot; INTEGER NOT NULL,
+    &quot;complemento&quot; VARCHAR(50)
+);
+
+CREATE TABLE IF NOT EXISTS &quot;especialidades&quot; (
+    &quot;id_especialidade&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    &quot;nome_especialidade&quot; VARCHAR(50) NOT NULL,
+    &quot;imagem&quot; VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS &quot;certificados&quot; (
+    &quot;id_certificado&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    &quot;nome_certificado&quot; VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS &quot;empreiteiras&quot; (
+	&quot;id_empreiteira&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    &quot;CNPJ&quot; VARCHAR(14) NOT NULL,
+    &quot;razao_social&quot; VARCHAR(100) NOT NULL,
+    &quot;nome_fantasia&quot; VARCHAR(100) NOT NULL,
+    &quot;quantidade_funcionarios&quot; INTEGER,
+    &quot;avaliacao&quot; INTEGER,
+    &quot;email&quot; VARCHAR(50) NOT NULL,
+    &quot;telefone&quot; VARCHAR(11) NOT NULL,
+	&quot;trabalhou_com_mrv&quot; BOOLEAN,
+    &quot;status_documentacao&quot; VARCHAR(50),
+    &quot;id_endereco&quot; INTEGER NOT NULL,
+    FOREIGN KEY(id_endereco) REFERENCES enderecos(id_endereco)
+);
+
+CREATE TABLE IF NOT EXISTS &quot;obras&quot; (
+    &quot;id_obra&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    &quot;nome_obra&quot; VARCHAR(50) NOT NULL,
+    &quot;id_endereco&quot; INTEGER NOT NULL,
+    &quot;image&quot; VARCHAR(250),
+    FOREIGN KEY(id_endereco) REFERENCES enderecos(id_endereco)
+);
+
+CREATE TABLE IF NOT EXISTS &quot;funcionarios_empreiteiras&quot; (
+    &quot;id_funcionario&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    &quot;id_empreiteira&quot; INTEGER NOT NULL,
+    &quot;nome_funcionario&quot; INTEGER NOT NULL,
+    &quot;responsavel&quot; BOOLEAN NOT NULL,
+    &quot;sexo&quot; VARCHAR(1),
+    &quot;cpf&quot; VARCHAR(11),
+    &quot;email&quot; VARCHAR(50),
+    &quot;senha&quot; VARCHAR(50),
+    &quot;departamento&quot; VARCHAR(50),
+    &quot;cargo&quot; VARCHAR(50),
+    &quot;telefone&quot; VARCHAR(11),
+    &quot;ultima_atualizacao&quot; DATE,
+    &quot;pendencias&quot; BOOLEAN,
+    &quot;status&quot; VARCHAR(50),
+    FOREIGN KEY(id_empreiteira) REFERENCES empreiteiras(id_empreiteira)
+);
+
+CREATE TABLE IF NOT EXISTS &quot;empreiteiras_certificados&quot; (
+    &quot;id_empreiteira_certificado&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    &quot;id_empreiteira&quot; INTEGER NOT NULL,
+    &quot;id_certificado&quot; INTEGER NOT NULL,
+    FOREIGN KEY(id_empreiteira) REFERENCES empreiteiras(id_empreiteira),
+    FOREIGN KEY(id_certificado) REFERENCES certificados(id_certificado)
+);
+
+CREATE TABLE IF NOT EXISTS &quot;admin&quot; (
+    &quot;id_funcionario_mrv&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    &quot;nome&quot; VARCHAR(50) NOT NULL,
+    &quot;email&quot; VARCHAR(50) NOT NULL,
+    &quot;senha&quot; VARCHAR(50) NOT NULL,
+    &quot;regional&quot; VARCHAR(50) NOT NULL,
+    &quot;telefone&quot; VARCHAR(11) NOT NULL,
+    &quot;ultima_atualizacao&quot; DATE
+);
+
+CREATE TABLE IF NOT EXISTS &quot;oportunidades&quot; (
+    &quot;id_oportunidade&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    &quot;nome_oportunidade&quot; VARCHAR(50) NOT NULL,
+    &quot;id_endereco&quot; INTEGER NOT NULL,
+    &quot;image&quot; VARCHAR(250) NOT NULL,
+    &quot;titulo&quot; VARCHAR(50) NOT NULL,
+    &quot;descricao&quot; TEXT NOT NULL,
+    &quot;resumo&quot; TEXT NOT NULL,
+    &quot;quantidade_pessoas_desejadas&quot; INTEGER NOT NULL,
+    &quot;id_especialidade&quot; INTEGER NOT NULL,
+    &quot;id_obra&quot; INTEGER NOT NULL,
+    &quot;data_inicio&quot; DATE,
+    &quot;data_fim&quot; DATE,
+    FOREIGN KEY(id_endereco) REFERENCES enderecos(id_endereco),
+    FOREIGN KEY(id_especialidade) REFERENCES especialidades(id_especialidade),
+    FOREIGN KEY(id_obra) REFERENCES obras(id_obra)
+);
+
+CREATE TABLE IF NOT EXISTS &quot;empreiteiras_especialidades&quot; (
+    &quot;id_empreiteiras_especialidades&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+	&quot;id_empreiteira&quot; INTEGER NOT NULL,
+    &quot;id_especialidade&quot; INTEGER NOT NULL,
+    FOREIGN KEY(id_empreiteira) REFERENCES empreiteiras(id_empreiteira),
+    FOREIGN KEY(id_especialidade) REFERENCES especialidades(id_especialidade)
+);
+
+CREATE TABLE IF NOT EXISTS &quot;feedbacks&quot; (
+    &quot;id_feedback&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    &quot;descricao_feedback&quot; TEXT NOT NULL,
+    &quot;id_empreiteira&quot; INTEGER NOT NULL,
+    &quot;id_oportunidade&quot; INTEGER NOT NULL,
+    FOREIGN KEY(id_empreiteira) REFERENCES empreiteiras(id_empreiteira),
+    FOREIGN KEY(id_oportunidade) REFERENCES oportunidades(id_oportunidade)
+);
+
+CREATE TABLE IF NOT EXISTS &quot;empreiteira_historico_obras&quot; (
+    &quot;id_historico_obra&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    &quot;id_empreiteira&quot; INTEGER NOT NULL,
+    &quot;id_obra&quot; INTEGER NOT NULL,
+    &quot;id_oportunidade&quot; INTEGER NOT NULL,
+    FOREIGN KEY(id_empreiteira) REFERENCES empreiteiras(id_empreiteira),
+    FOREIGN KEY(id_oportunidade) REFERENCES oportunidades(id_oportunidade),
+    FOREIGN KEY(id_obra) REFERENCES obras(id_obra)
+);
+
+CREATE TABLE IF NOT EXISTS &quot;favoritos&quot; (
+    &quot;id_favorito&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    &quot;id_empreiteira&quot; INTEGER NOT NULL,
+    &quot;id_oportunidade&quot; INTEGER NOT NULL,
+    FOREIGN KEY(id_empreiteira) REFERENCES empreiteiras(id_empreiteira),
+    FOREIGN KEY(id_oportunidade) REFERENCES oportunidades(id_oportunidade)
+);
+
+CREATE TABLE IF NOT EXISTS &quot;contratos&quot; (
+    &quot;id_contrato&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    &quot;id_oportunidade&quot; INTEGER NOT NULL,
+    &quot;id_empreiteira&quot; INTEGER NOT NULL,
+    &quot;contrato&quot; VARCHAR(150) NOT NULL,
+    &quot;quantidade_funcionarios&quot; INTEGER NOT NULL,
+    &quot;pendencias&quot; BOOLEAN NOT NULL,
+    &quot;status_contrato&quot; VARCHAR(50) NOT NULL,
+    &quot;observacoes&quot; TEXT NOT NULL,
+    FOREIGN KEY(id_oportunidade) REFERENCES oportunidades(id_oportunidade),
+    FOREIGN KEY(id_empreiteira) REFERENCES empreiteiras(id_empreiteira)
+);
+
+COMMIT;
+</sql><current_tab id="0"/></tab_sql></sqlb_project>

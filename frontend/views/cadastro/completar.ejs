@@ -1,0 +1,76 @@
+<%- include("../cabecalho") %>
+
+
+    <div class="container-fluid container-fluid-cadastro">
+        <!-- home > cadastro  -->
+
+        <div class="container areaCadastro">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center teste">Cadastro</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 iconeCadastroInicial">
+                    <img src="../../public/images/cadastro-2.svg" alt="">
+                </div>
+                <div class="row cadastro">
+                    <div class="col-12 informacoesContato">
+                        <h2>Informações da empresa</h2>
+                    </div>
+
+                    <form class="formCadastro" action="/cadastro/completarCadastro" method="post">
+                        <div class="containerCadastro">
+                          
+                          <div class="col-12 grupoLabel grupoRadio">
+                              <label class="form-label" for="trabalhouComMrv">Já trabalhou com a MRV?</label>
+                              <div class="inputRadio">
+                                  <input type="radio" name="trabalhouComMrv" value="sim" /> Sim
+                                  <input type="radio" name="trabalhouComMrv" value="nao" /> Não
+                              </div>
+                          </div>
+                            <div class="col-12 grupoLabel">
+                                <label class="form-label" for="razaoSocial">Razão social da empresa</label>
+                                <input class="form-control" type="text" name="razaoSocial" placeholder="Ex: 38.386.974/0001-28">
+                            </div>
+                            <div class="col-12 grupoLabel">
+                                <label class="form-label" for="nomeFantasia">Nome fantasia</label>
+                                <input class="form-control" type="text" name="nomeFantasia"
+                                    placeholder="Ex: empresa-empreiteira@gmail.com">
+                            </div>
+
+                            <div class="col-12 grupoLabel">
+                                <label class="form-label" for="cep">CEP</label>
+                                <input class="form-control" type="text" name="cep"
+                                    placeholder="Digite a sua senha aqui">
+                            </div>
+
+                            <div class="col-12 grupoLabel">
+                                <label class="form-label" for="rua">Rua</label>
+                                <input class="form-control" type="text" name="rua"
+                                    placeholder="Digite novamente a sua senha">
+                            </div>
+                            <div class="col-12 grupoLabel">
+                              <label class="form-label" for="numero">Número</label>
+                              <input class="form-control" type="text" name="numero"
+                                  placeholder="Digite novamente a sua senha">
+                          </div>
+
+                            <div class="containerBotaoCadastro"> <input type="submit"
+                                    class="btn btn-warning botaoAcessar botaoCadastro" value="CONTINUAR">
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    </body>
+
+    </html>

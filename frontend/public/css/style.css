@@ -1,0 +1,688 @@
+/* alterando a margin e padding de todos os elementos */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* alterando a cor padrao da pagina */
+.container-fluid, .container {
+  background-color: #F4F4F4;
+}
+
+/* mudando o background do header */
+.header{
+    background: rgb(0,107,63);
+    background: linear-gradient(90deg, rgba(0,107,63,1) 0%, rgba(7,157,86,1) 35%, rgba(0,107,63,1) 100%);
+    box-shadow:#FFFFFF;
+}
+
+/* mudando o estilo da fonte do header */
+.nav-link{
+    margin-left: 5rem;
+    color: white;
+    font-weight: 700;
+}
+
+#headerOportunidades ,#headerAjuda ,#headerLogin ,#headerCadastro ,#headerPerfil {
+    color: white;
+}
+
+/* propriedades da logo no header */
+.navbar > a > img {
+    width: 120px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* propriedades do container de pesquisa da home */
+.containerPesquisa{
+    background: rgb(0,107,63);
+    background: linear-gradient(90deg, rgba(0,107,63,1) 0%, rgba(7,157,86,1) 35%, rgba(0,107,63,1) 100%);
+    margin-left: 0;
+    margin-right: 0;
+    padding: 48px 0 32px 0;
+    margin-bottom: 24px;
+}
+
+/* centralizando o form da pesquisa */
+.formAgrupamento {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+/* centralizando os textos das pesquisas */
+.gridAgrupamentoHome  {
+    justify-content: space-between;
+}
+
+/* alterando estilo da fotne da pesquisa */
+.inputForm {
+    font-size: 20px;
+    font-weight: 800;
+    color: #FFFFFF;
+}
+
+/* alterando propriedades do botao de pesquisa */
+.botaoPesquisar {
+    background-color: black;
+    color: white;
+    font-weight: 800;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    width: 300px;
+    height: 50px;
+}
+.containerPesquisaBotao{
+  display: flex;
+  justify-content: center;
+}
+
+
+/* propriedades dos icones de pesquisa da home */
+.containerIconeOportunidades {
+    padding: 24px 0 48px 48px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* centralizando os icones */
+.containerIconeOportunidades>h2 {
+    left: 50%;
+    font-weight: 1000;
+}
+
+/* propriedades do titulo de icone */
+.tituloIconeOportunidades {
+    display: flex;
+    justify-content: center;
+}
+
+/* propriedades do background dos icones */
+.containerIconeOportunidade {
+    background: rgb(255,139,34);
+    background: linear-gradient(90deg, rgba(255,139,34,1) 35%, rgba(255,183,25,1) 100%);
+    width: 100px;
+    height: 140px;
+    margin-left: 0;
+    margin-right: 0;
+    align-items: center;
+    justify-content: center;
+    padding-top: 16px;
+    margin-top: 32px;
+}
+.containerIconeOportunidade>img {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 8px;
+}
+
+/* criando a div de depoimentos */
+.depoimentosContainer {
+    background: rgb(0,107,63);
+    background: linear-gradient(90deg, rgba(0,107,63,1) 0%, rgba(7,157,86,1) 35%, rgba(0,107,63,1) 100%);
+    margin-bottom: 24px;
+    padding: 24px 48px 16px 48px;
+    margin: 0 0 24px 0;
+}
+
+/* titulos de depoimentos */
+.tituloDepoimentos > h2{
+    margin-top: 24px;
+    color: white;
+}
+
+/* centralizando os depoimentos */
+.depoimentosGrupo {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+/* mudando a fonte de depoimento */
+.depoimento {
+    margin: 24px 24px 24px 24px;
+    background: rgb(255,139,34);
+    background: linear-gradient(90deg, rgba(255,139,34,1) 35%, rgba(255,183,25,1) 100%);
+    max-width: 400px;
+}
+/* propriedades da imagem da empreiteira */
+.imagemEmpreiteira {
+    margin: 24px 0 0 48px;
+    border-radius: 10%;
+    background-image: url("./backgroundGreen.png");
+    width: 250px;
+    height: 250px;
+}
+
+.oportunidadesMaisProcuradas {
+  background-color: white;
+}
+
+.tituloOportunidadesMaisProcuradas {
+    text-align: center;
+    
+}
+
+/* criando a div de perguntas frequentes */
+  .perguntasFrequentes{
+    background: rgb(0,107,63);
+    background: linear-gradient(90deg, rgba(0,107,63,1) 0%, rgba(7,157,86,1) 35%, rgba(0,107,63,1) 100%);
+    text-align: center;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+/* atualizando o estilo de perguntas frequentes */
+.perguntasFrequentes>h2{
+    color: white;
+    margin-bottom: 24px;
+}
+.panel{
+  background: rgb(255,139,34);
+  background: linear-gradient(90deg, rgba(255,139,34,1) 35%, rgba(255,183,25,1) 100%);
+}
+
+/* criando container de pesquisa por localização */
+.containerLocalizacao{
+    margin: 8px 16px;
+    display: flex;
+    align-items: center;
+  }
+/* tamanho da imagem dentro do container de localização */
+ .containerLocalizacao > img {
+  width:18px;
+  margin-right: 4px;
+}
+/* cor da fonte do container de localização */
+.containerLocalizacao > a {
+  color: #000;
+}
+
+/* estilo da fonte da pagina atual */
+.paginaAtual {
+  font-weight: 500;
+  text-decoration: underline;
+}
+/* criando margem para o separador de localização */
+#separadorLocalizacao {
+  margin: 0 4px;
+}
+
+#module #collapseExample.collapse:not(.show) {
+  display: block;
+  height: 4.2rem;
+  overflow: hidden;
+  display: flex;
+}
+
+/* colapsando os filtros */
+#module #collapseExample.collapsing {
+  height: 4.2rem;
+}
+
+.filtroContainer {
+  background-color: green;
+  padding: 16px
+}
+
+/* background com degrade */
+.backgroundGreen{
+  background: rgb(0,107,63);
+  background: linear-gradient(90deg, rgba(0,107,63,1) 0%, rgba(7,157,86,1) 35%, rgba(0,107,63,1) 100%);
+}
+
+/* alinhando itens dentro do filtro */
+.filtro {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+  text-align: center;
+  align-items: center;
+}
+
+.filtroLabel {
+  color: #FFFFFF;
+}
+
+/* alterando estilo da fonte dos inputs do filtro */
+.filtroInput{
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 80%;
+}
+
+/* alinhando o botao de pesquisar */
+.botaoPesquisar {
+  display: flex;
+  justify-content: center;
+}
+
+/* criando div de informacoes das oportunidades */
+.informacoesOportunidades {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quantidadeOportunidades, .ordenacaoOportunidades{
+  margin: 32px;
+}
+
+/* alinhando o card de oportunidades */
+.card {
+  padding: 16px;
+  margin-bottom: 48px;
+}
+
+/* estilo de fonte do card de oportunidades */
+.card-title {
+  text-align: center;
+  font-weight: 700;
+}
+
+/* centralizando imagem dentro do card */
+.card-img-bottom {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: flex;
+  margin-bottom: 24px;
+}
+
+
+
+/* centralizando o card */
+.card-text {
+  display: flex;
+  margin-left: 16px;
+}
+.card-text-label {
+  font-weight: 700;
+}
+
+.card-text-response {
+  margin-left: 8px;
+}
+/* centralizando botao do card */
+.containerBotaoAcessar{
+  display: flex;
+  justify-content: center;
+}
+
+/* estilizando botao de acessar do card */
+.botaoAcessar{
+  background: rgb(255,139,34);
+  background: linear-gradient(90deg, rgba(255,139,34,1) 0%, rgba(255,183,25,1) 100%, rgba(0,212,255,1) 100%);
+  color: #FFFFFF;
+  width: 150px;
+}
+
+.ver_mais{
+  background-color: red;
+}
+
+
+.iconeCadastroInicial {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+
+}
+.iconeCadastroInicial > img {
+  width: 300px;
+  height: 150px;
+}
+
+.areaCadastro{
+  background-color: white;
+}
+
+.text-center {
+  margin-top: 48px;
+}
+.cadastro{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.grupoLabel{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+  justify-content: center;
+}
+
+.form-control {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.botaoCadastro{
+  display: flex;
+  justify-content: center;
+  margin: 0
+}
+.containerBotaoCadastro{
+  display: flex;
+  justify-content: center;
+}
+
+.formCadastro {
+  width: 60%;
+  margin-bottom: 32px;
+  /* margin-top: 32px; */
+}
+
+.container-fluid-cadastro {
+  padding-bottom:48px;
+  padding-top: 32px;
+  
+}
+
+.informacoesContato{
+  margin: 0 0 32px 0;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+#empreiteiro1 {
+  background-image: url(../images/empreiteiro-2.jpg);
+  background-repeat:round;
+
+}
+
+#empreiteiro2 {
+  background-image: url(../images/empreiteiro-1.webp);
+  background-repeat:round;
+
+}
+
+a {
+  color: inherit
+}
+
+#rodape {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+body{
+  background-color: #F4F4F4;
+}
+
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #6a11cb;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+  }
+
+.fw-bold {
+  font-weight: 700 !important;
+}
+.form-label {
+  font-weight: 600;
+}
+
+.passwordArea{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cadastroArea {
+  display: flex;
+  justify-content: space-between;
+}
+.userArea {
+  display: flex;
+  justify-content: space-between;
+}
+.card-body {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+.form-control-lg {
+  box-shadow:0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
+
+.text-secondary {
+  font-size: 16px;
+  text-decoration: underline;
+  color: red;
+}
+
+.login_container{
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 400px;
+  height: 400px;
+  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+.loginAccount {
+  align-self: center;
+  align-items: center;
+}
+
+
+#loginName{
+  display: flex;
+  width: 300px;
+  height: 30px;
+  padding-left: 10px;
+  margin: 0;
+  align-items: center;
+  align-self: center;
+  padding: 0;
+}
+
+.footer {
+  display: flex;  
+  justify-content: space-between;
+  height: 100px;
+
+}
+
+.logo {
+  background-color: #ffffff;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo > img{
+  width: 100px;
+  height: 80px;
+  
+  
+}
+
+.options{
+  background-color: #006B3F;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.options > * {
+  margin: 4px;
+}
+.search {
+  background-color: #FF8B22;
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+#loginFooter {
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+}
+#ouFooter {
+  color: #FFB719;
+  font-size: 12px;
+}
+#cadastroFooter {
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+}
+.menu {
+  background-color: #ffffff;
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botaoLogin{
+  background: rgb(0,107,63);
+  background: linear-gradient(90deg, rgba(0,107,63,1) 0%, rgba(7,157,86,1) 35%, rgba(0,107,63,1) 100%);
+  color: white;
+  border-color: white;
+}
+
+
+#home{
+  display:flex;
+  justify-content: center;
+}
+
+.mae{
+  display:flex;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+#principal{
+  width: 400px ;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+#titulo_perfil {
+  display: flex;
+  justify-content: center;
+}
+
+.titulo {
+  font-size: 15px;
+}
+
+.sub {
+  font-size: 15px;
+}
+
+.feedbacks {
+  color: #ffffff;
+  width: 283px;
+  height: 201px;
+  left: 46px;
+  top: 501px;
+  background: #006B3F;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+
+#fd2{
+  display: flex;
+  margin-top: 40px;
+  align-items: baseline;
+}
+
+.info {
+  width: 283px;
+  height: 285px;
+  color: #ffffff;
+  background: #006B3F;
+  border-radius: 10px;
+  padding-top: 10px;
+}
+
+
+.esp{
+  background-color: #D9D9D9;
+  border-radius: 10px ;
+  width: 283px;
+  height: 24px;
+}
+
+.cert{
+  background-color: #D9D9D9;
+  border-radius: 10px ;
+  width: 283px;
+  height: 24px;
+}
+
+.contratos{
+  width: 283px;
+  height: 184px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #006B3F;
+  border-radius: 10px;
+  color: #ffffff;
+  padding-top: 10px;
+  
+}
+
+
+.funcionarios{
+  width: 283px;
+  height: 126px;    
+  background: #006B3F;
+  border-radius: 10px;
+  color: #ffffff;
+  padding-top: 10px;
+}
+
+.oportunidades{
+  width: 283px;
+  height: 158px;
+  background: #006B3F;
+  border-radius: 10px;
+  color: #ffffff
+      
+}
